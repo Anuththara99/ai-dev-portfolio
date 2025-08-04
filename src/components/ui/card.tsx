@@ -81,6 +81,19 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+function GlassCard({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="glass-card"
+      className={cn(
+        "bg-white/20 dark:bg-gray-800/30 border border-white/30 dark:border-gray-200/10 backdrop-blur-md rounded-xl shadow-lg",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
 export {
   Card,
   CardHeader,
@@ -89,4 +102,5 @@ export {
   CardAction,
   CardDescription,
   CardContent,
+  GlassCard,
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { GlassCard } from "@/components/ui/card";
 
 const projects = [
   {
@@ -32,24 +33,25 @@ export function Projects() {
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
-            className="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex flex-col overflow-hidden"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 + i * 0.1, ease: 'easeOut' }}
           >
-            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-            <div className="p-6 flex-1 flex flex-col">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.tech.map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                    {tag}
-                  </span>
-                ))}
+            <GlassCard className="flex flex-col overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tech.map((tag) => (
+                    <span key={tag} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </GlassCard>
           </motion.div>
         ))}
       </div>
