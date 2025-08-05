@@ -5,6 +5,7 @@ import { AITools } from "@/components/portfolio/AITools";
 import { Contact } from "@/components/portfolio/Contact";
 import { About } from "@/components/portfolio/About";
 import ProfessionalProjects from "@/components/portfolio/ProfessionalProjects";
+import Education from "@/components/portfolio/Education";
 import Resume from "@/components/portfolio/Resume";
 import Testimonials from "@/components/portfolio/Testimonials";
 import Blog from "@/components/portfolio/Blog";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Education/>
       <Projects/>
       <ProfessionalProjects/>
       <Blog />
