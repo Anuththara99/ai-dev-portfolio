@@ -1,0 +1,71 @@
+Find in logs
+CtrlF
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Cloning github.com/Anuththara99/ai-dev-portfolio (Branch: dev, Commit: fea0b07)
+Previous build caches not available.
+Cloning completed: 340.000ms
+Running "vercel build"
+Vercel CLI 50.15.1
+Running "install" command: `npm install`...
+added 414 packages, and audited 415 packages in 17s
+150 packages are looking for funding
+  run `npm fund` for details
+4 vulnerabilities (1 low, 1 moderate, 1 high, 1 critical)
+To address issues that do not require attention, run:
+  npm audit fix
+To address all issues, run:
+  npm audit fix --force
+Run `npm audit` for details.
+Detected Next.js version: 15.3.3
+Running "npm run build"
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+   ▲ Next.js 15.3.3
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 11.0s
+   Linting and checking validity of types ...
+./src/components/portfolio/AITools.tsx
+65:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/portfolio/About.tsx
+16:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/portfolio/Blog.tsx
+105:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/portfolio/ProfessionalProjects.tsx
+187:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/portfolio/Projects.tsx
+114:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/portfolio/Skills.tsx
+43:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/portfolio/Testimonials.tsx
+33:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+   Generating static pages (5/7) 
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    85.3 kB         186 kB
+├ ○ /_not-found                            977 B         102 kB
+├ ƒ /api/github-projects                   138 B         101 kB
+└ ƒ /api/medium-posts                      138 B         101 kB
++ First Load JS shared by all             101 kB
+  ├ chunks/4bd1b696-0e920cf7fdd3b2c1.js  53.2 kB
+  ├ chunks/684-de4b1de519352a47.js       45.9 kB
+  └ other shared chunks (total)          1.89 kB
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+Traced Next.js server files in: 94.188ms
+Created all serverless functions in: 98.65ms
+Collected static files (public/, static/, .next/static): 12.432ms
+Build Completed in /vercel/output [49s]
+Error: Vulnerable version of Next.js detected, please update immediately. Learn More: https://vercel.link/CVE-2025-66478
+
