@@ -38,7 +38,7 @@ export default function Hero() {
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">
-          Hi, I'm <span className="text-primary">Anuththara</span>
+          Hi, I&apos;m <span className="text-primary">Anuththara</span>
         </h1>
         <h2 className="text-xl md:text-2xl font-medium mb-8 text-gray-700 dark:text-gray-300">
           Full Stack Developer

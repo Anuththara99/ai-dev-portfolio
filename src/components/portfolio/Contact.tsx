@@ -22,14 +22,14 @@ export function Contact() {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  async function onSubmit(data: FormData) {
+  async function onSubmit() {
     setLoading(true);
     try {
       await new Promise((r) => setTimeout(r, 1000)); // Simulate API
       // Replace with actual API call
       toast.success("Message sent!");
       reset();
-    } catch (e) {
+    } catch {
       toast.error("Something went wrong.");
     } finally {
       setLoading(false);

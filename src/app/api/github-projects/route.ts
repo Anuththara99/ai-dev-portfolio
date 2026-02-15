@@ -58,7 +58,7 @@ export async function GET(request: Request) {
     const repos: GitHubProject[] = await response.json();
 
     // Filter and transform repositories
-    let filteredRepos = repos.filter(repo => {
+    const filteredRepos = repos.filter(repo => {
       // Skip excluded projects
       if (excludedProjects.includes(repo.name)) return false;
       

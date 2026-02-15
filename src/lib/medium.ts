@@ -47,7 +47,7 @@ export async function fetchMediumPostsAPI(username: string, apiKey?: string): Pr
       },
     });
     
-    const data = await response.json();
+    await response.json();
     // Transform Medium API response to BlogPost format
     // Implementation depends on Medium API structure
     

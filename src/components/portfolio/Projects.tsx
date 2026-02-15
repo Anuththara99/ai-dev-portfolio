@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
 import { GlassCard } from "@/components/ui/card";
 import { fetchGitHubProjects } from "@/lib/github";
 import { GITHUB_CONFIG } from "@/config/github";
@@ -28,7 +27,6 @@ export function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setLoading(true);

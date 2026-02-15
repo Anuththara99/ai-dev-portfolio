@@ -18,8 +18,7 @@ export function GradientButton({
   onClick, 
   className = "", 
   variant = "primary",
-  size = "md",
-  gradient = "pink"
+  size = "md"
 }: GradientButtonProps) {
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",

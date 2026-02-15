@@ -51,7 +51,7 @@ export default function Testimonials() {
                 </div>
                 
                 <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
-                  "{testimonial.message}"
+                  &quot;{testimonial.message}&quot;
                 </p>
               </GlassCard>
             </motion.div>

@@ -1,12 +1,10 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
 
 const profileImg = "/assets/about/profile.jpeg"; // Replace with your image path
 
 export function About() {
-  const { resolvedTheme } = useTheme();
   return (
     <motion.section
       className="w-full max-w-3xl mx-auto py-16 px-4 flex flex-col items-center"
@@ -22,7 +20,7 @@ export function About() {
       />
       <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">About Me</h2>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 text-center">
-        Hi! I'm Anuththara, a full-stack developer who builds solutions that don’t just work — they adapt, scale, and evolve. 
+        Hi! I&apos;m Anuththara, a full-stack developer who builds solutions that don&apos;t just work — they adapt, scale, and evolve. 
         My recent focus? Leveraging Generative AI alongside robust backend systems to craft next-gen applications for a rapidly changing digital world.
         a passionate full stack developer who loves building modern web apps. 
       </p>

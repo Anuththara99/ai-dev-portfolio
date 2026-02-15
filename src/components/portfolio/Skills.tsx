@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
 
 const skills = [
   { name: "React", icon: "/assets/skills/react.svg", top: true },

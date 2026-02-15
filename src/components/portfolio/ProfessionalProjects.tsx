@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Briefcase, Calendar, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { Briefcase, Calendar, ChevronDown, ChevronUp } from "lucide-react";
 
 // Sample professional project data
 interface ProfessionalProject {
