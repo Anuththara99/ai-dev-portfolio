@@ -4,6 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const schema = z.object({
   name: z.string().min(2),
@@ -22,15 +23,19 @@ export function Contact() {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  async function onSubmit() {
+  async function onSubmit(data: FormData) {
     setLoading(true);
     try {
-      await new Promise((r) => setTimeout(r, 1000)); // Simulate API
-      // Replace with actual API call
-      toast.success("Message sent!");
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        { name: data.name, email: data.email, message: data.message },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      toast.success("Message sent! I'll get back to you soon.");
       reset();
     } catch {
-      toast.error("Something went wrong.");
+      toast.error("Failed to send. Please try again or email me directly.");
     } finally {
       setLoading(false);
     }
