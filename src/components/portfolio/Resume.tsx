@@ -7,7 +7,7 @@ import { GlassCard } from "@/components/ui/card";
 export default function Resume() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'downloads/resume.pdf';
+    link.href = 'downloads/AnuththaraSachiniResume.pdf';
     link.download = 'Anuththara_Resume.pdf';
     document.body.appendChild(link);
     link.click();
