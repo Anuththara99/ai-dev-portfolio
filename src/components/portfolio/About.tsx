@@ -20,9 +20,10 @@ export function About() {
       />
       <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">About Me</h2>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 text-center">
-        Hi! I&apos;m Anuththara, a full-stack developer who builds solutions that don&apos;t just work — they adapt, scale, and evolve. 
-        My recent focus? Leveraging Generative AI alongside robust backend systems to craft next-gen applications for a rapidly changing digital world.
-        a passionate full stack developer who loves building modern web apps. 
+        Hi! I&apos;m Anuththara, a full-stack software engineer with 3+ years building production
+         systems across telecom, banking, and automation. I've worked with international
+          clients, led projects end-to-end, and I'm always looking to pick up new 
+          technologies and solve problems in different domains.
       </p>
       <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-base text-center">
         <li>🚀 3+ years industry experience</li>
