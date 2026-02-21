@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { PROJECT_IMAGES, DEFAULT_PROJECT_IMAGE } from '@/config/projectImages';
 
 // Define Project interface
 interface GitHubProject {
@@ -101,8 +102,7 @@ export async function GET(request: Request) {
       topics: repo.topics || [],
       createdAt: new Date(repo.created_at).toISOString().split('T')[0],
       updatedAt: new Date(repo.updated_at).toISOString().split('T')[0],
-      // Generate a placeholder image based on the project name
-      image: `https://via.placeholder.com/400x200/3B82F6/FFFFFF?text=${encodeURIComponent(repo.name)}`
+      image: PROJECT_IMAGES[repo.name] ?? DEFAULT_PROJECT_IMAGE,
     }));
 
     return NextResponse.json({ projects });
