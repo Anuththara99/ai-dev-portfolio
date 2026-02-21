@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const gradientLight =
   "bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200";
@@ -10,13 +11,18 @@ const gradientDark =
 
 export default function Hero() {
   const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = mounted && resolvedTheme === "dark";
+  const gradientClass = isDark ? gradientDark : gradientLight;
 
   return (
     <section
-      className={`relative w-full h-screen flex items-center justify-center overflow-hidden transition-colors duration-700 ${
-        isDark ? gradientDark : gradientLight
-      }`}
+      className={`relative w-full h-screen flex items-center justify-center overflow-hidden transition-colors duration-700 ${gradientClass}`}
     >
       {/* Animated Gradient Overlay */}
       <motion.div

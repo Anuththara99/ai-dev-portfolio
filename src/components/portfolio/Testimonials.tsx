@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { User } from 'lucide-react';
 import { testimonials } from '@/data/testimonials';
 import { GlassCard } from "@/components/ui/card";
 
@@ -35,18 +36,20 @@ export default function Testimonials() {
                     alt={`${testimonial.name} avatar`}
                     className="rounded-full w-12 h-12 object-cover mr-4"
                     onError={(e) => {
-                      // Fallback to a default avatar if image fails to load
                       const target = e.target as HTMLImageElement;
                       target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=6366f1&color=fff&size=48`;
                     }}
                   />
-                  <div>
+                  <div className="flex items-center gap-2 min-w-0">
+                    <User className="w-5 h-5 flex-shrink-0 text-primary" aria-hidden />
+                    <div className="min-w-0">
                     <h3 className="font-semibold text-gray-900 dark:text-white">
                       {testimonial.name}
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                       {testimonial.role}
                     </p>
+                    </div>
                   </div>
                 </div>
                 
