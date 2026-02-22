@@ -9,9 +9,9 @@ const tools = [
     use: "I use Cursor AI for UI generation and code suggestions.",
   },
   {
-    name: "GitHub Copilot",
-    icon: "/assets/ai/copilot.svg",
-    use: "Copilot helps me autocomplete code and explore new APIs.",
+    name: "Grok",
+    icon: "/assets/ai/grok.svg",
+    use: "Grok helps me with research, code, and real-time information.",
   },
   {
     name: "ChatGPT",
@@ -19,9 +19,9 @@ const tools = [
     use: "I use ChatGPT for brainstorming, debugging, and explanations.",
   },
   {
-    name: "Midjourney",
-    icon: "/assets/ai/midjourney.svg",
-    use: "Midjourney assists in generating creative visuals and assets.",
+    name: "Antigravity",
+    icon: "/assets/ai/antigravity.svg",
+    use: "Antigravity assists in generating creative visuals and assets.",
   },
   {
     name: "Claude",
