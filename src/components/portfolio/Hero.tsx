@@ -19,6 +19,9 @@ export default function Hero() {
 
   const isDark = mounted && resolvedTheme === "dark";
   const gradientClass = isDark ? gradientDark : gradientLight;
+  const buttonClass = isDark
+    ? "bg-white text-gray-900 hover:bg-gray-100"
+    : "bg-primary text-white hover:bg-primary/90";
 
   return (
     <section
@@ -53,7 +56,7 @@ export default function Hero() {
           href="#projects"
           whileHover={{ scale: 1.07 }}
           whileTap={{ scale: 0.97 }}
-          className="inline-block px-8 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg hover:bg-primary/90 transition-colors text-lg"
+          className={`inline-block px-8 py-3 rounded-lg font-semibold shadow-lg transition-colors text-lg ${buttonClass}`}
         >
           View Projects
         </motion.a>
