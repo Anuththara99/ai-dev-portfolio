@@ -3,14 +3,18 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React", icon: "/assets/skills/react.svg", top: true },
+  { name: "Java", icon: "/assets/skills/java.svg", top: true },
+  { name: "Spring Boot", icon: "/assets/skills/spring-boot.svg", top: true },
   { name: "TypeScript", icon: "/assets/skills/typescript.svg", top: true },
-  { name: "Tailwind CSS", icon: "/assets/skills/tailwind-css.svg", top: true },
+  { name: "JavaScript", icon: "/assets/skills/javascript.svg", top: true },
+  { name: "React", icon: "/assets/skills/react.svg", top: true },
+  { name: "MySQL", icon: "/assets/skills/mysql.svg", top: false },
+  { name: "Docker", icon: "/assets/skills/docker.svg", top: false },
   { name: "Next.js", icon: "/assets/skills/nextjs.svg", top: false },
   { name: "Node.js", icon: "/assets/skills/nodejs.svg", top: false },
-  { name: "Framer Motion", icon: "/assets/skills/framer-motion.svg", top: false },
-  { name: "GraphQl", icon: "/assets/skills/graphql.svg", top: false },
-  { name: "Prisma", icon: "/assets/skills/prisma.svg", top: false },
+  { name: "Tailwind CSS", icon: "/assets/skills/tailwind-css.svg", top: false },
+  { name: "MongoDB", icon: "/assets/skills/mongodb.svg", top: false },
+  { name: "Keycloak", icon: "/assets/skills/keycloak.svg", top: false },
 ];
 
 export function Skills() {

@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anuththara | AI Developer Portfolio",
+  title: "Anuththara | Developer Portfolio",
   description:
-    "Portfolio of Anuththara Sachini – full-stack and AI-focused developer.",
+    "Portfolio of Anuththara Sachini – full-stack developer.",
 };
 
 export default function RootLayout({
